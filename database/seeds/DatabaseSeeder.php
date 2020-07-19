@@ -1,5 +1,5 @@
 <?php
-
+use App\Subcategory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,13 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(UserTableSeeder::class);
-<<<<<<< HEAD
-        $this->call(AuthorSeeder::class);
-        $this->call(BlogSeeder::class);
-        $this->call(CategorySeeder::class);
-        $this->call(ProductSeeder::class);
-=======
->>>>>>> 2ae050481c7297f9a574bec5b33ffa2a32f35a2b
+         $this->call(UserTableSeeder::class);
+         $this->call(BlogSeeder::class);
+         $this->call(CategorySeeder::class);
+         $this->call(ProductSeeder::class);
+         $this->call(SubcategorySeeder::class);
     }
 }

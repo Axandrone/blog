@@ -1,5 +1,5 @@
 <?php
-use App\User;
+use App\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','IndexController@index'); 
+Route::get('/', 'indexController@index');
 
-Route::get('/test', function(){
-$users = User::get();
-dd($users);
+
+Route::get('/test', function()
+{
+    return responce()->json(Product::get());
 });
+
